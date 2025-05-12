@@ -105,7 +105,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     role: str = models.CharField(
-        max_length=6,
+        max_length=8,
         choices=ROLE_CHOICES,
         default='user',
         verbose_name=_("Role")
