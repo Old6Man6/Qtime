@@ -21,3 +21,22 @@ class AvailableTimeSerializer(serializers.ModelSerializer):
             'duration_minutes',
             'is_booked',
         ]
+
+
+
+class appointmentSerializer(serializers.ModelSerializer):
+
+    """
+    Serializer for the appointment model
+    """
+    class Meta:
+        model = Appointment
+        fields = [
+            'user'
+            'available_time'
+            'is_confirmed'
+        ]
+
+        read_only_fields = [
+
+        ]

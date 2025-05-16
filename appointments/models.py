@@ -153,7 +153,7 @@ class AvailableTime(models.Model):
 class Appointment(models.Model):
     """
     Model to represent an appointment made by a user.
-    user, service, branch, provider, appointment_time, is_confirmed
+    user, user, available_time, is_confirmed
     """
     user: 'models.ForeignKey' = models.ForeignKey(
         'accounts.User',
