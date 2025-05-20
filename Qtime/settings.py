@@ -28,8 +28,9 @@ INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     "branches.apps.BranchesConfig",
     "appointments.apps.AppointmentsConfig",
-    "notifications.apps.NotificationsConfig"
+    "notifications.apps.NotificationsConfig",
     "rest_framework",
+    "drf_spectacular",
 ]
 
 REST_FRAMEWORK = {
@@ -39,9 +40,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
-    'DEFAULT_FILTER_BACKENDS': [
-        'rest_framework.filters.DjangoFilterBackend',
-    ]
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 
@@ -127,8 +129,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = BASE_DIR / 'static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Appointment API',
+    'DESCRIPTION': 'API documentation for Appointment management system.',
+    'VERSION': '1.0.0',
+}

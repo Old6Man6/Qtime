@@ -32,7 +32,6 @@ class AvailableTime(models.Model):
     )
 
     duration_minutes: int = models.PositiveIntegerField(
-        editable=False,
         verbose_name=_("Duration (minutes)")
     )
 

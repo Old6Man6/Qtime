@@ -5,4 +5,12 @@ __pycache__/
 *.pyc
 db.sqlite3
 /backup
-
+/accounts/migrations
+/accounts/__pycache__
+/appointments/migrations
+/appointments/__pycache__
+/branches/migrations
+/branches/__pycache__
+/notifications/migrations
+/notifications/__pycache__
+/Qtime/__pycache__
