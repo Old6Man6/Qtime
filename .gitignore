@@ -1,16 +1,95 @@
-/.venv
-/.idea
-/.env
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Django-related
+*.log
+*.pot
 *.pyc
-db.sqlite3
-/backup
-/accounts/migrations
-/accounts/__pycache__
-/appointments/migrations
-/appointments/__pycache__
-/branches/migrations
-/branches/__pycache__
-/notifications/migrations
-/notifications/__pycache__
-/Qtime/__pycache__
+*.sqlite3
+*.sqlite
+*.db
+local_settings.py
+.env
+.env.*
+.envrc
+
+# Django media / static (generated or user-uploaded)
+media/
+staticfiles/
+static/
+assets/
+
+# Redis dump
+dump.rdb
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.idea/
+
+# Pytest / coverage / test output
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+.cache
+.pytest_cache/
+
+# MyPy / Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Build / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyCharm
+.idea/
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Swagger / Spectacular generated schema (if exported)
+openapi-schema.yml
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+
+# Others
+logs/
+*.log
+*.bak
+*.swp
+*.swo
+
+# Node modules (if using Tailwind or front-end tooling)
+node_modules/
+npm-debug.log
+yarn-error.log

@@ -90,6 +90,18 @@ DATABASES = {
     }
 }
 
+
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379/1",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
+
+
 # User model
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -140,3 +152,11 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'API documentation for Appointment management system.',
     'VERSION': '1.0.0',
 }
+
+
+# Enable/Disable OTP login system
+OTP_LOGIN_ENABLED = False  # Set to True to enable OTP login
+
+# # OTP Rate Limiting
+OTP_CODE_TTL_SECONDS = 180  # 3 minutes
+OTP_RATE_LIMIT_SECONDS = 180

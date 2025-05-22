@@ -20,3 +20,9 @@ class BranchAdmin(admin.ModelAdmin):
     list_display = ('name', 'location', 'phone_number')
     search_fields = ('name', 'location', 'phone_number')
     inlines = [AvailableTimeInline]
+
+
+class ServiceInline(admin.TabularInline):
+    model = Service
+    extra = 0
+    fields = ('name', 'duration_minutes', 'price', 'description')
